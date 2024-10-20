@@ -70,10 +70,53 @@ making them a scalable solution for e-commerce businesses that experience
 high traffic volumes.
     </p>
   </ul>
+  <h3>Chat-bot flow</h3>
+      ![E-Commerce Telebot (1)](https://github.com/user-attachments/assets/390f8bc4-810b-4622-ab48-9936764b37ad)
  <h3> How to Set Up Chat-bot ?</h3>
  <ul>
-  <li><strong>Setting Up telegram Bot</li> 
-    
+  <li>Register a Bot with BothFather</li> 
+      <ol>
+        <li>Open your Telegram app and search for "BotFather."</li>
+        <li>Start a chat with BotFather.</li>
+            Use the <code>/newbot</code> command to create a new bot.
+        <li>Follow the instructions provided by BotFather, including choosing a name and
+            username for your bot.</li>
+        <li>Once your bot is created, BotFather will provide you with a unique API token. This
+            token is required to interact with the Telegram Bot API and send and receive  
+            messages with your bot.</li>
+        <li>Copy the API token </li>
+            <p>The API token is a long string of characters provided by BotFather. It serves as your
+                bot's authentication key when communicating with Telegram's servers. You will need to
+                keep this token secure and use it in your chatbot's code to send and receive messages.</p>
+    </ol>
+    <li>Setting Up MongoDB With Docker</li> 
+<p>MongoDB is a NoSQL database system that is well-suited for e-commerce applications.
+   It allows you to store and manage a wide variety of data, including product information,
+   user profiles, order history, and more. Using Docker to set up MongoDB provides an
+   efficient and portable way to manage your database environment.</p>
+<ol>
+  <li><strong>Install Docker:</strong> If you haven't already, install Docker on your server or local
+      machine. You can find installation instructions for your specific operating system on
+      the Docker website.</li>
+  <li><strong>Pull the MongoDB Docker Image:</strong> Open your terminal and run the following
+      command to pull the official MongoDB Docker image:</li>
+      <pre><code>docker pull mongo</code></pre>
+  <li><strong>Run MongoDB in a Docker Container:</strong> Start a MongoDB container by running the
+      following command:</li>
+      <pre><code>docker run -d -p 27017:27017 --name my-mongodb mongo</code></pre>
+      <p>Here’s a breakdown of the command:</p>
+      <ul>
+        <li><code>-d</code> runs the container in the background.</li>
+        <li><code>-p 27017:27017</code> maps port 27017 from the container to the host machine, allowing
+            you to access MongoDB locally.</li>
+        <li><code>--name my-mongodb</code> assigns a name to your container.</li>
+        <li><code>mongo</code> specifies the name of the Docker image.</li>
+      </ul>
+  <li><strong>MongoDB Connection:</strong> In your chatbot code, you can now connect to MongoDB
+      using the host <code>localhost</code> and port <code>27017</code>. You can also specify a
+      database name to store your e-commerce data.</li>
+</ol>
+
   </ul>
 
   
